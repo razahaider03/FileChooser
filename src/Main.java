@@ -1,13 +1,10 @@
-import java.io.File;
+
+import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) {
-        fileChoser f = new fileChoser();
+    public static void main(String[] args) throws IOException {
 
-        File[] files = f.chooseFiles();
-        for (File file : files) {
-            System.out.println(file.getAbsolutePath());
-        }
-        
+        filesChoser f = new filesChoser();
+        System.out.println(f.asString());  
     }
 }
